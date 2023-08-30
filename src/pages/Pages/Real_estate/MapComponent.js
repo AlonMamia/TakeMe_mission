@@ -67,9 +67,21 @@ function MapComponent() {
             <InfoWindow onCloseClick={() => setActiveMarker(null)}>
               <div>
                 <h1>{name}</h1>
-                <a href={"tel:" + phone_number}> התקשר: </a>
+                <a
+                  href={"tel:" + phone_number}
+                  style={{ width: "1000%" }}
+                  className=" ri-phone-line"
+                >
+                  התקשר:
+                </a>
                 <br></br>
-                <a href={"https://wa.me/" + phone_number}> שלח הודעה: </a>
+                <a
+                  href={"https://wa.me/" + phone_number}
+                  className=" ri-whatsapp-line"
+                >
+                  {" "}
+                  שלח הודעה:
+                </a>
               </div>
             </InfoWindow>
           ) : null}
